@@ -32,7 +32,7 @@ export const en: Dict = {
     directions: "Get directions",
     hours: "See opening hours",
     imageAlt:
-      "A calm, bright consultation room with ivory walls, a Moroccan arched window and a small potted olive tree.",
+      "Dr Zineb Mikkioui's consulting office: wooden desk, stethoscope, blood-pressure monitor and framed diplomas.",
   },
   strip: {
     specialty: "General medicine",
@@ -97,7 +97,7 @@ export const en: Dict = {
     phoneHelp: "Charged at your operator's standard rate.",
     directions: "Open directions in Google Maps",
     viewOnMaps: "View the Google Maps listing",
-    mapAlt: "Moroccan architectural detail: the shadow of an arch on an ivory wall.",
+    mapAlt: "The practice front: the sign 'Dr Zineb Mikkioui — Médecine Générale, 1st floor' above the entrance.",
     closed: "Closed",
     days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     today: "Today",

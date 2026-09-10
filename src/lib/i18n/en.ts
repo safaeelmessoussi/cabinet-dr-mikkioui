@@ -32,7 +32,7 @@ export const en: Dict = {
     directions: "Get directions",
     hours: "See opening hours",
     imageAlt:
-      "A calm, bright consultation room with ivory walls, a Moroccan arched window and a small potted olive tree.",
+      "Dr Zineb Mikkioui's consulting office: wooden desk, stethoscope, blood-pressure monitor and framed diplomas.",
   },
   strip: {
     specialty: "General medicine",

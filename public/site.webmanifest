@@ -9,7 +9,6 @@
   "theme_color": "#2C4F4A",
   "lang": "fr",
   "icons": [
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "/logo-avatar.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    { "src": "/favicon.png", "sizes": "64x64", "type": "image/png", "purpose": "any maskable" }
   ]
 }

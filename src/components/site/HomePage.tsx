@@ -3,7 +3,7 @@ import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle } 
 import { clinic, localeMeta, type Locale } from "@/lib/clinic";
 import { getDict } from "@/lib/i18n";
 import consultationRoom from "@/assets/consultation-room.jpg";
-import cabinetFacade from "@/assets/cabinet-facade.jpg";
+import cabinetFacade from "@/assets/cabinet-facade-flowers.png.asset.json";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const d = getDict(locale);
@@ -190,12 +190,12 @@ export function HomePage({ locale }: { locale: Locale }) {
 
               <div className="overflow-hidden rounded-[var(--radius-card)] border border-border">
                 <img
-                  src={cabinetFacade}
+                  src={cabinetFacade.url}
                   alt={d.practical.mapAlt}
                   width={1600}
                   height={912}
                   loading="lazy"
-                  className="aspect-16/9 w-full object-cover"
+                  className="aspect-4/3 w-full object-cover object-top"
                 />
               </div>
             </div>

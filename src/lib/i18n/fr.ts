@@ -32,7 +32,7 @@ export const fr: Dict = {
     directions: "Itinéraire",
     hours: "Voir les horaires",
     imageAlt:
-      "Salle de consultation calme et lumineuse, murs ivoire, fenêtre en arc marocain et petit olivier en pot.",
+      "Le bureau de consultation du Dr Zineb Mikkioui : bureau en bois, stéthoscope, tensiomètre et diplômes encadrés.",
   },
   strip: {
     specialty: "Médecine générale",
@@ -97,7 +97,7 @@ export const fr: Dict = {
     phoneHelp: "Appel au tarif habituel de votre opérateur.",
     directions: "Ouvrir l'itinéraire dans Google Maps",
     viewOnMaps: "Voir la fiche Google Maps",
-    mapAlt: "Détail architectural marocain : ombre d'un arc sur un mur ivoire.",
+    mapAlt: "Façade du cabinet : plaque « Dr Zineb Mikkioui — Médecine Générale, 1er étage » au-dessus de l'entrée.",
     closed: "Fermé",
     days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
     today: "Aujourd'hui",

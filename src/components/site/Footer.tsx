@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { clinic, type Locale } from "@/lib/clinic";
 import type { Dict } from "@/lib/i18n";
 import { pagePath } from "@/lib/seo";
+import logoFull from "@/assets/dr-zineb-mikkioui-logo.jpg.asset.json";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
@@ -11,7 +12,7 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
     <footer className="border-t border-border bg-surface-strong">
       <div className="shell grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src="/logo-horizontal.svg" alt={`${clinic.doctorName} — ${d.footer.tagline}`} width={280} height={64} className="h-16 w-auto" />
+          <img src={logoFull.url} alt={`${clinic.doctorName} — ${d.footer.tagline}`} width={520} height={180} className="h-20 w-auto max-w-full object-contain object-left" />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">{d.footer.disclaimer}</p>
         </div>
 

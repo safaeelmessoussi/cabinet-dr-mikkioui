@@ -4,6 +4,7 @@ import { Menu, Phone, X } from "lucide-react";
 import { clinic, type Locale } from "@/lib/clinic";
 import type { Dict } from "@/lib/i18n";
 import { pagePath } from "@/lib/seo";
+import logoIcon from "@/assets/dr-zineb-mikkioui-icon.jpg.asset.json";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const sections = [
@@ -30,12 +31,12 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
       <div className="shell flex items-center justify-between gap-4 py-3">
         <Link to="/$lang" params={{ lang: locale }} className="flex shrink-0 items-center gap-3" aria-label={d.nav.home}>
           <img
-            src="/logo-icon.svg"
+            src={logoIcon.url}
             alt=""
             aria-hidden="true"
             width={40}
             height={40}
-            className="h-10 w-10"
+            className="h-10 w-10 rounded-full object-cover"
           />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-base font-semibold whitespace-nowrap text-primary sm:text-lg xl:text-base">

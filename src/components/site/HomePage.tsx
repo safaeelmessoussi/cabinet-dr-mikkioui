@@ -88,7 +88,9 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {paragraph}
               </p>
             ))}
-            <p className="text-sm text-muted-foreground">{d.about.note}</p>
+            {d.about.note && (
+              <p className="text-sm text-muted-foreground">{d.about.note}</p>
+            )}
           </div>
         </div>
       </section>
@@ -107,9 +109,11 @@ export function HomePage({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ul>
-          <p className="mt-8 max-w-3xl rounded-[var(--radius-card)] border border-sand bg-background p-5 text-sm text-muted-foreground">
-            {d.practice.disclaimer}
-          </p>
+          {d.practice.disclaimer && (
+            <p className="mt-8 max-w-3xl rounded-[var(--radius-card)] border border-sand bg-background p-5 text-sm text-muted-foreground">
+              {d.practice.disclaimer}
+            </p>
+          )}
         </div>
       </section>
 
@@ -228,7 +232,9 @@ export function HomePage({ locale }: { locale: Locale }) {
                   })}
                 </tbody>
               </table>
-              <p className="mt-4 text-sm text-muted-foreground">{d.practical.hoursSource}</p>
+              {d.practical.hoursSource && (
+                <p className="mt-4 text-sm text-muted-foreground">{d.practical.hoursSource}</p>
+              )}
             </div>
           </div>
         </div>
@@ -250,7 +256,9 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {clinic.phone.display}
               </span>
             </a>
-            <p className="mt-6 max-w-2xl text-sm opacity-80">{d.appointment.noForm}</p>
+            {d.appointment.noForm && (
+              <p className="mt-6 max-w-2xl text-sm opacity-80">{d.appointment.noForm}</p>
+            )}
           </div>
         </div>
       </section>

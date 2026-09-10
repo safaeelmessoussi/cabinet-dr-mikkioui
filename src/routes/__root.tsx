@@ -13,14 +13,14 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { clinic, isLocale, localeMeta } from "../lib/clinic";
 import { getDict } from "../lib/i18n";
-import logoIcon from "../assets/dr-zineb-mikkioui-icon.jpg.asset.json";
+import logoMark from "../assets/logo-mark.png";
 
 function NotFoundComponent() {
   const d = getDict("fr");
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <img src={logoIcon.url} alt="" aria-hidden="true" width={56} height={56} className="mx-auto h-14 w-14 rounded-full object-cover" />
+        <img src={logoMark} alt="" aria-hidden="true" width={56} height={56} className="mx-auto h-14 w-14 object-contain" />
         <h1 className="mt-6 font-display text-2xl text-primary">{d.notFound.title}</h1>
         <p className="mt-3 text-muted-foreground">{d.notFound.body}</p>
         <a href="/fr" className="btn btn-primary mt-8">

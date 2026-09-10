@@ -41,18 +41,18 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
             <span className="font-display text-base font-semibold whitespace-nowrap text-primary sm:text-lg">
               {clinic.doctorName}
             </span>
-            <span className="text-[0.68rem] font-bold tracking-[0.12em] text-muted-foreground uppercase">
+            <span className="text-[0.68rem] font-bold tracking-[0.12em] whitespace-nowrap text-muted-foreground uppercase xl:hidden">
               {d.footer.tagline}
             </span>
           </span>
         </Link>
 
-        <nav aria-label={d.nav.menu} className="hidden items-center gap-1 xl:flex">
+        <nav aria-label={d.nav.menu} className="hidden items-center xl:flex">
           {sections.map((s) => (
             <a
               key={s.id}
               href={`${home}#${s.id}`}
-              className="rounded-full px-3 py-2 text-sm font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-full px-2.5 py-2 text-[0.9rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               {d.nav[s.key]}
             </a>
@@ -61,7 +61,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
 
         <div className="flex shrink-0 items-center gap-2">
           <LanguageSwitcher current={locale} label={d.nav.chooseLanguage} compact className="hidden md:block" />
-          <a href={clinic.phone.href} className="btn btn-primary hidden !min-h-11 !px-4 text-sm whitespace-nowrap sm:inline-flex">
+          <a href={clinic.phone.href} className="btn btn-primary hidden !min-h-11 !px-4 text-sm whitespace-nowrap sm:inline-flex xl:!px-3.5">
             <Phone aria-hidden="true" className="h-4 w-4" />
             {d.nav.call}
           </a>

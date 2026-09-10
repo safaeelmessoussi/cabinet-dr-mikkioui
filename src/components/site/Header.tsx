@@ -38,7 +38,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
             className="h-10 w-10"
           />
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-base font-semibold whitespace-nowrap text-primary sm:text-lg">
+            <span className="font-display text-base font-semibold whitespace-nowrap text-primary sm:text-lg xl:text-base">
               {clinic.doctorName}
             </span>
             <span className="text-[0.68rem] font-bold tracking-[0.12em] whitespace-nowrap text-muted-foreground uppercase xl:hidden">
@@ -52,7 +52,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
             <a
               key={s.id}
               href={`${home}#${s.id}`}
-              className="rounded-full px-2.5 py-2 text-[0.9rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-full px-2 py-2 text-[0.85rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               {d.nav[s.key]}
             </a>

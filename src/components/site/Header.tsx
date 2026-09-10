@@ -28,7 +28,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="shell flex items-center justify-between gap-4 py-3">
-        <Link to="/$lang" params={{ lang: locale }} className="flex items-center gap-3" aria-label={d.nav.home}>
+        <Link to="/$lang" params={{ lang: locale }} className="flex shrink-0 items-center gap-3" aria-label={d.nav.home}>
           <img
             src="/logo-icon.svg"
             alt=""

@@ -50,7 +50,7 @@ export const en: Dict = {
       "Dr Zineb Mikkioui's practice is a general medical practice on Avenue El Moutanabi in Marrakech. People come here to be listened to, examined and given a clear sense of what comes next — for a one-off health concern, ongoing follow-up or preventive advice.",
       "Three qualities come up again and again in the public reviews left by people seen at the practice: listening, attentiveness to the person, and the trust that builds over time.",
     ],
-    note: "This page publishes only publicly verifiable information about the practice. It contains no personal patient data.",
+    note: null,
   },
   practice: {
     title: "General medicine in practice",
@@ -72,9 +72,12 @@ export const en: Dict = {
         title: "Referral",
         body: "Being referred, where necessary, for further tests or to a specialist.",
       },
+      {
+        title: "Ultrasound",
+        body: "The practice has an ultrasound machine for complementary examinations, when medically indicated.",
+      },
     ],
-    disclaimer:
-      "This section describes the usual scope of general medicine. It is not a list of the services offered at this practice and is no substitute for medical advice. To find out whether your situation can be seen here, please call the practice.",
+    disclaimer: null,
   },
   approach: {
     title: "How a consultation unfolds",
@@ -92,7 +95,7 @@ export const en: Dict = {
     addressTitle: "Address",
     plusCode: "Plus Code",
     hoursTitle: "Opening hours",
-    hoursSource: "Hours as published on the practice's Google listing.",
+    hoursSource: null,
     phoneTitle: "Phone",
     phoneHelp: "Charged at your operator's standard rate.",
     directions: "Open directions in Google Maps",
@@ -106,8 +109,7 @@ export const en: Dict = {
     title: "Booking an appointment",
     body: "The practice does not offer online booking. To make an appointment or ask a practical question, please call the practice directly during opening hours.",
     cta: "Call the practice",
-    noForm:
-      "Please do not send medical information in writing: this website cannot receive it.",
+    noForm: null,
   },
   emergency: {
     title: "In an emergency",
@@ -170,20 +172,12 @@ export const en: Dict = {
         body: "The sole purpose of this website is to provide the practical information needed to contact the practice and travel to it: address, opening hours, phone number and directions.",
       },
       {
-        title: "Content",
-        body: "The published information comes from verifiable public sources, notably the practice's Google listing. It may change; if in doubt, the information given by the practice over the phone takes precedence.",
-      },
-      {
         title: "No medical advice",
         body: "No content on this site constitutes a diagnosis, a prescription or individual medical advice. This site collects no health information.",
       },
       {
-        title: "Intellectual property",
-        body: "The visual identity, texts and illustrations on this site are protected. The atmospheric photographs are illustrative and depict neither the practice nor the people who work there.",
-      },
-      {
         title: "Hosting",
-        body: "This is a static website served by a web hosting provider. No visitor database is created.",
+        body: "This website is served by a web hosting provider. No visitor database is created.",
       },
     ],
   },

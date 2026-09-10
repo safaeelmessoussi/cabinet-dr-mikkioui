@@ -50,7 +50,7 @@ export const fr: Dict = {
       "Le cabinet du Dr Zineb Mikkioui est un cabinet de médecine générale situé avenue El Moutanabi, à Marrakech. On y vient pour être écouté, examiné et orienté clairement — que ce soit pour un problème de santé ponctuel, un suivi ou un conseil de prévention.",
       "Dans les avis publics laissés par les personnes reçues au cabinet, trois qualités reviennent régulièrement : l'écoute, l'attention portée à la personne et la confiance qui s'installe au fil des consultations.",
     ],
-    note: "Cette page présente uniquement des informations publiquement vérifiables sur le cabinet. Elle ne contient aucune donnée personnelle sur les patients.",
+    note: null,
   },
   practice: {
     title: "La médecine générale, en pratique",
@@ -72,9 +72,12 @@ export const fr: Dict = {
         title: "Orientation",
         body: "Être adressé, si nécessaire, vers un examen complémentaire ou un médecin spécialiste.",
       },
+      {
+        title: "Échographie",
+        body: "Le cabinet dispose d'un appareil d'échographie pour la réalisation d'examens complémentaires, sur indication médicale.",
+      },
     ],
-    disclaimer:
-      "Cette rubrique décrit le champ habituel de la médecine générale. Elle n'est pas la liste des actes proposés au cabinet et ne remplace pas un avis médical. Pour savoir si votre situation peut être prise en charge, appelez le cabinet.",
+    disclaimer: null,
   },
   approach: {
     title: "Comment se déroule une consultation",
@@ -92,7 +95,7 @@ export const fr: Dict = {
     addressTitle: "Adresse",
     plusCode: "Code Plus",
     hoursTitle: "Horaires d'ouverture",
-    hoursSource: "Horaires publiés sur la fiche Google du cabinet.",
+    hoursSource: null,
     phoneTitle: "Téléphone",
     phoneHelp: "Appel au tarif habituel de votre opérateur.",
     directions: "Ouvrir l'itinéraire dans Google Maps",
@@ -106,8 +109,7 @@ export const fr: Dict = {
     title: "Prendre rendez-vous",
     body: "Le cabinet ne propose pas de réservation en ligne. Pour prendre rendez-vous ou poser une question d'organisation, appelez directement le cabinet pendant les heures d'ouverture.",
     cta: "Appeler le cabinet",
-    noForm:
-      "Merci de ne pas transmettre d'informations médicales par écrit : elles ne peuvent pas être reçues par ce site.",
+    noForm: null,
   },
   emergency: {
     title: "En cas d'urgence",
@@ -170,20 +172,12 @@ export const fr: Dict = {
         body: "Le site a pour unique objet de donner les informations pratiques permettant de joindre le cabinet et de s'y rendre : adresse, horaires, téléphone et itinéraire.",
       },
       {
-        title: "Contenu",
-        body: "Les informations publiées proviennent de sources publiques vérifiables, notamment la fiche Google du cabinet. Elles peuvent évoluer ; en cas de doute, l'information donnée par téléphone par le cabinet prévaut.",
-      },
-      {
         title: "Absence d'avis médical",
         body: "Aucun contenu de ce site ne constitue un diagnostic, une prescription ou un avis médical personnalisé. Ce site ne recueille aucune information de santé.",
       },
       {
-        title: "Propriété intellectuelle",
-        body: "L'identité visuelle, les textes et les illustrations de ce site sont protégés. Les photographies d'ambiance sont des visuels d'illustration et ne représentent ni le cabinet ni les personnes qui y travaillent.",
-      },
-      {
         title: "Hébergement",
-        body: "Le site est un site statique, hébergé par un prestataire technique d'hébergement web. Aucune base de données de visiteurs n'est constituée.",
+        body: "Ce site est servi par un prestataire d'hébergement web. Aucune base de données de visiteurs n'est constituée.",
       },
     ],
   },
@@ -191,7 +185,7 @@ export const fr: Dict = {
     title: "Politique de confidentialité",
     updated: "Dernière mise à jour",
     intro:
-      "Ce site est volontairement minimaliste : il ne collecte aucune donnée personnelle et ne cherche pas à identifier ses visiteurs.",
+      "Ce site est volontairement minimaliste : il collecte aucune donnée personnelle et ne cherche pas à identifier ses visiteurs.",
     sections: [
       {
         title: "Aucune collecte de données",
@@ -207,15 +201,15 @@ export const fr: Dict = {
       },
       {
         title: "Liens externes",
-        body: "Les boutons d'itinéraire et de fiche ouvrent Google Maps. Une fois sur ce service, ce sont les règles de confidentialité de Google qui s'appliquent.",
+        body: "Les boutons d'itinéraire et de fiche ouvrent Google Maps. Une fois là-bas, ce sont les règles de confidentialité de Google qui s'appliquent.",
       },
       {
         title: "Journaux techniques",
         body: "L'hébergeur du site peut conserver des journaux techniques de connexion à des fins de sécurité et de bon fonctionnement. Ces journaux ne sont pas exploités par le cabinet.",
       },
       {
-        title: "Vos questions",
-        body: "Pour toute question relative à ce site, vous pouvez contacter le cabinet par téléphone au +212 5 24 34 50 84.",
+        title: "Questions",
+        body: "Pour toute question relative à ce site, vous pouvez appeler le cabinet au +212 5 24 34 50 84.",
       },
     ],
   },

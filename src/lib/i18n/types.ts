@@ -34,12 +34,12 @@ export interface Dict {
     schedule: string;
     scheduleDetail: string;
   };
-  about: { title: string; body: string[]; note: string };
+  about: { title: string; body: string[]; note: string | null };
   practice: {
     title: string;
     lead: string;
     items: { title: string; body: string }[];
-    disclaimer: string;
+    disclaimer: string | null;
   };
   approach: { title: string; lead: string; steps: { title: string; body: string }[] };
   practical: {
@@ -47,7 +47,7 @@ export interface Dict {
     addressTitle: string;
     plusCode: string;
     hoursTitle: string;
-    hoursSource: string;
+    hoursSource: string | null;
     phoneTitle: string;
     phoneHelp: string;
     directions: string;
@@ -57,7 +57,7 @@ export interface Dict {
     days: string[];
     today: string;
   };
-  appointment: { title: string; body: string; cta: string; noForm: string };
+  appointment: { title: string; body: string; cta: string; noForm: string | null };
   emergency: {
     title: string;
     body: string;

@@ -41,7 +41,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
             <span className="font-display text-base font-semibold whitespace-nowrap text-primary sm:text-lg">
               {clinic.doctorName}
             </span>
-            <span className="text-[0.68rem] font-bold tracking-[0.12em] text-muted-foreground uppercase">
+            <span className="text-[0.68rem] font-bold tracking-[0.12em] whitespace-nowrap text-muted-foreground uppercase xl:hidden">
               {d.footer.tagline}
             </span>
           </span>

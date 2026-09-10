@@ -10,33 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangRouteImport } from './routes/$lang'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangConfidentialiteRouteImport } from './routes/$lang.confidentialite'
+import { Route as LangMentionsLegalesRouteImport } from './routes/$lang.mentions-legales'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangConfidentialiteRoute = LangConfidentialiteRouteImport.update({
+  id: '/confidentialite',
+  path: '/confidentialite',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangMentionsLegalesRoute = LangMentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/confidentialite': typeof LangConfidentialiteRoute
+  '/$lang/mentions-legales': typeof LangMentionsLegalesRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/confidentialite': typeof LangConfidentialiteRoute
+  '/$lang/mentions-legales': typeof LangMentionsLegalesRoute
+  '/$lang': typeof LangIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/confidentialite': typeof LangConfidentialiteRoute
+  '/$lang/mentions-legales': typeof LangMentionsLegalesRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/confidentialite'
+    | '/$lang/mentions-legales'
+    | '/$lang/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/$lang/confidentialite' | '/$lang/mentions-legales' | '/$lang'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/confidentialite'
+    | '/$lang/mentions-legales'
+    | '/$lang/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangRoute: typeof LangRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +95,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/confidentialite': {
+      id: '/$lang/confidentialite'
+      path: '/confidentialite'
+      fullPath: '/$lang/confidentialite'
+      preLoaderRoute: typeof LangConfidentialiteRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/mentions-legales': {
+      id: '/$lang/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/$lang/mentions-legales'
+      preLoaderRoute: typeof LangMentionsLegalesRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
+interface LangRouteChildren {
+  LangConfidentialiteRoute: typeof LangConfidentialiteRoute
+  LangMentionsLegalesRoute: typeof LangMentionsLegalesRoute
+  LangIndexRoute: typeof LangIndexRoute
+}
+
+const LangRouteChildren: LangRouteChildren = {
+  LangConfidentialiteRoute: LangConfidentialiteRoute,
+  LangMentionsLegalesRoute: LangMentionsLegalesRoute,
+  LangIndexRoute: LangIndexRoute,
+}
+
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangRoute: LangRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" width="420" height="96" role="img" aria-label="Dr Zineb Mikkioui — Médecine générale à Marrakech">
+  <g transform="translate(8,14) scale(1.05)" fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 57V30c0-11 9-17 20-25 11 8 20 14 20 25v27" />
+    <path d="M20 24h10L20 38h10" />
+    <path d="M34 38V24l5 7 5-7v14" />
+    <path d="M24 47h16" stroke="#A9C0A2" />
+  </g>
+  <text x="96" y="47" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-size="27" letter-spacing="0.4" fill="#F4EFE4">Dr Zineb Mikkioui</text>
+  <text x="97" y="69" font-family="Karla, Helvetica, Arial, sans-serif" font-size="13.5" letter-spacing="1.6" fill="#B9B3A4">MÉDECINE GÉNÉRALE · MARRAKECH</text>
+</svg>

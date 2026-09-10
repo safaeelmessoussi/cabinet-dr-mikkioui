@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Dr Zineb Mikkioui">
+  <rect width="64" height="64" rx="14" fill="#F7F3E9" />
+  <g fill="none" stroke="#2C4F4A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(32,33) scale(0.78) translate(-32,-32)">
+    <path d="M12 57V30c0-11 9-17 20-25 11 8 20 14 20 25v27" />
+    <path d="M20 24h10L20 38h10" />
+    <path d="M34 38V24l5 7 5-7v14" />
+  </g>
+</svg>

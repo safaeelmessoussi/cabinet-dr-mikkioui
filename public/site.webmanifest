@@ -1,0 +1,15 @@
+{
+  "name": "Dr Zineb Mikkioui — Médecine générale à Marrakech",
+  "short_name": "Dr Z. Mikkioui",
+  "description": "Adresse, horaires, téléphone et itinéraire du cabinet de médecine générale du Dr Zineb Mikkioui à Marrakech.",
+  "start_url": "/fr",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F3E9",
+  "theme_color": "#2C4F4A",
+  "lang": "fr",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/logo-avatar.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

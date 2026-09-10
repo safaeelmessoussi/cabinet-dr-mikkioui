@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cabinet-dr-mikkioui.lovable.app/fr"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cabinet-dr-mikkioui.lovable.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cabinet-dr-mikkioui.lovable.app/en"/>
+    <xhtml:link rel="alternate" hreflang="zgh" href="https://cabinet-dr-mikkioui.lovable.app/zgh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cabinet-dr-mikkioui.lovable.app/fr"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/ar</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/en</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/zgh</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/fr/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/fr/confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/ar/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/ar/confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/en/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/en/confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/zgh/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cabinet-dr-mikkioui.lovable.app/zgh/confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

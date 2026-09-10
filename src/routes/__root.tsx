@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -11,24 +11,20 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { clinic, isLocale, localeMeta } from "../lib/clinic";
+import { getDict } from "../lib/i18n";
 
 function NotFoundComponent() {
+  const d = getDict("fr");
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
+        <img src="/logo-icon.svg" alt="" aria-hidden="true" width={56} height={56} className="mx-auto h-14 w-14" />
+        <h1 className="mt-6 font-display text-2xl text-primary">{d.notFound.title}</h1>
+        <p className="mt-3 text-muted-foreground">{d.notFound.body}</p>
+        <a href="/fr" className="btn btn-primary mt-8">
+          {d.notFound.cta}
+        </a>
       </div>
     </div>
   );
@@ -37,6 +33,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const d = getDict("fr");
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -44,27 +41,22 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
+        <h1 className="font-display text-xl text-primary">Cette page n'a pas pu s'afficher</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Vous pouvez réessayer, ou appeler directement le cabinet au {clinic.phone.display}.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button
             onClick={() => {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="btn btn-primary !min-h-11 text-sm"
           >
-            Try again
+            Réessayer
           </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            Go home
+          <a href="/fr" className="btn btn-quiet !min-h-11 text-sm">
+            {d.notFound.cta}
           </a>
         </div>
       </div>
@@ -77,21 +69,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Dr Zineb Mikkioui — Médecin généraliste à Marrakech" },
+      {
+        name: "description",
+        content:
+          "Cabinet de médecine générale du Dr Zineb Mikkioui à Marrakech : adresse, horaires, téléphone et itinéraire.",
+      },
+      { property: "og:site_name", content: "Dr Zineb Mikkioui" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#F7F3E9" },
+      { name: "geo.region", content: "MA-MAR" },
+      { name: "geo.placename", content: "Marrakech" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "apple-touch-icon", href: "/logo-avatar.svg" },
+      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&family=Noto+Kufi+Arabic:wght@400;500;700&family=Noto+Sans+Tifinagh&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
@@ -101,8 +102,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const segment = pathname.split("/")[1] ?? "";
+  const locale = isLocale(segment) ? segment : "fr";
+  const { htmlLang, dir } = localeMeta[locale];
+
   return (
-    <html lang="en">
+    <html lang={htmlLang} dir={dir}>
       <head>
         <HeadContent />
       </head>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Dr Zineb Mikkioui — médecine générale, Marrakech">
+  <rect width="512" height="512" fill="#2C4F4A" />
+  <g fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(256,236) scale(5.2) translate(-32,-32)">
+    <path d="M12 57V30c0-11 9-17 20-25 11 8 20 14 20 25v27" />
+    <path d="M20 24h10L20 38h10" />
+    <path d="M34 38V24l5 7 5-7v14" />
+    <path d="M24 47h16" stroke="#A9C0A2" />
+  </g>
+  <text x="256" y="452" text-anchor="middle" font-family="Karla, Helvetica, Arial, sans-serif" font-size="34" letter-spacing="4" fill="#A9C0A2">MARRAKECH</text>
+</svg>

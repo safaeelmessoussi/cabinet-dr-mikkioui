@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Dr Zineb Mikkioui" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#F7F3E9" },
+      { name: "theme-color", content: "#F2F7FC" },
       { name: "geo.region", content: "MA-MAR" },
       { name: "geo.placename", content: "Marrakech" },
     ],

@@ -4,10 +4,12 @@
 /*
  * Design system — Cabinet Dr Zineb Mikkioui
  *
- * Warm ivory ground, deep eucalyptus as the primary voice, muted sage and
- * sand as supports, a restrained terracotta accent. All colours are oklch
- * and every component pulls from these tokens — never from raw utilities.
+ * Palette dérivée du bleu du logo (#1A65A1) : fond bleuté très clair,
+ * bleu médical profond comme voix principale, nuances claires et navy
+ * en supports. Toutes les couleurs sont en oklch et chaque composant
+ * passe par ces tokens — jamais par des utilitaires bruts.
  */
+
 
 @theme inline {
   --color-background: var(--background);
@@ -35,22 +37,23 @@
 }
 
 :root {
-  --background: oklch(0.973 0.011 92);
-  --foreground: oklch(0.248 0.012 84);
-  --surface: oklch(0.988 0.007 92);
-  --surface-strong: oklch(0.946 0.015 88);
-  --primary: oklch(0.372 0.045 178);
-  --primary-foreground: oklch(0.973 0.011 92);
-  --sage: oklch(0.605 0.045 155);
-  --sage-soft: oklch(0.905 0.024 148);
-  --sand: oklch(0.884 0.029 78);
-  --muted: oklch(0.938 0.014 88);
-  --muted-foreground: oklch(0.446 0.014 82);
-  --accent: oklch(0.523 0.114 42);
-  --accent-soft: oklch(0.933 0.032 62);
-  --border: oklch(0.878 0.017 86);
-  --ring: oklch(0.372 0.045 178);
+  --background: oklch(0.976 0.009 242);
+  --foreground: oklch(0.268 0.048 252);
+  --surface: oklch(0.995 0.004 240);
+  --surface-strong: oklch(0.944 0.019 243);
+  --primary: oklch(0.472 0.106 250);
+  --primary-foreground: oklch(0.99 0.004 240);
+  --sage: oklch(0.612 0.086 246);
+  --sage-soft: oklch(0.916 0.031 244);
+  --sand: oklch(0.876 0.043 243);
+  --muted: oklch(0.944 0.015 242);
+  --muted-foreground: oklch(0.474 0.034 248);
+  --accent: oklch(0.352 0.084 252);
+  --accent-soft: oklch(0.928 0.033 246);
+  --border: oklch(0.886 0.021 243);
+  --ring: oklch(0.472 0.106 250);
 }
+
 
 @layer base {
   * {
@@ -174,7 +177,7 @@
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
   &:hover {
-    background-color: oklch(0.318 0.042 178);
+    background-color: oklch(0.392 0.096 252);
   }
 }
 

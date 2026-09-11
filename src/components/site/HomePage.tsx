@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle } from "lucide-react";
+import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle, Facebook, Instagram } from "lucide-react";
 import { clinic, localeMeta, type Locale } from "@/lib/clinic";
 import { getDict } from "@/lib/i18n";
 import consultationRoom from "@/assets/consultation-room.jpg";
@@ -190,6 +190,28 @@ export function HomePage({ locale }: { locale: Locale }) {
                   </a>
                 </p>
                 <p className="mt-2 text-sm text-muted-foreground">{d.practical.phoneHelp}</p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href={clinic.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-quiet !min-h-11 text-sm"
+                  >
+                    <Facebook aria-hidden="true" className="h-4 w-4" />
+                    Facebook
+                    <span className="sr-only"> ({d.footer.externalHint})</span>
+                  </a>
+                  <a
+                    href={clinic.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-quiet !min-h-11 text-sm"
+                  >
+                    <Instagram aria-hidden="true" className="h-4 w-4" />
+                    Instagram
+                    <span className="sr-only"> ({d.footer.externalHint})</span>
+                  </a>
+                </div>
               </div>
 
               <div className="overflow-hidden rounded-[var(--radius-card)] border border-border">

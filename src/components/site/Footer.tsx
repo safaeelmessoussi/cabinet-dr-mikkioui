@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook, Instagram } from "lucide-react";
 import { clinic, type Locale } from "@/lib/clinic";
 import type { Dict } from "@/lib/i18n";
 import { pagePath } from "@/lib/seo";
-import logoFull from "@/assets/dr-zineb-mikkioui-logo.jpg.asset.json";
+import logoMark from "@/assets/logo-mark.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
@@ -12,7 +13,41 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
     <footer className="border-t border-border bg-surface-strong">
       <div className="shell grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logoFull.url} alt={`${clinic.doctorName} — ${d.footer.tagline}`} width={520} height={180} className="h-20 w-auto max-w-full object-contain object-left" />
+          <div className="flex items-center gap-4">
+            <img
+              src={logoMark}
+              alt={`${clinic.doctorName} — ${d.footer.tagline}`}
+              width={72}
+              height={72}
+              className="h-16 w-16 shrink-0 object-contain"
+            />
+            <span className="flex flex-col leading-tight">
+              <span className="font-display text-lg font-semibold text-primary">{clinic.doctorName}</span>
+              <span className="text-[0.7rem] font-bold tracking-[0.12em] text-muted-foreground uppercase">
+                {d.footer.tagline}
+              </span>
+            </span>
+          </div>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={clinic.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Facebook — ${clinic.doctorName}`}
+              className="btn btn-quiet !min-h-11 !w-11 !px-0"
+            >
+              <Facebook aria-hidden="true" className="h-5 w-5" />
+            </a>
+            <a
+              href={clinic.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Instagram — ${clinic.doctorName}`}
+              className="btn btn-quiet !min-h-11 !w-11 !px-0"
+            >
+              <Instagram aria-hidden="true" className="h-5 w-5" />
+            </a>
+          </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">{d.footer.disclaimer}</p>
         </div>
 

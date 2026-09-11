@@ -48,6 +48,12 @@ export const clinic = {
     { key: "police", number: "19" },
     { key: "gendarmerie", number: "177" },
   ],
+  /** Official public pages of the practice. */
+  social: {
+    facebook:
+      "https://www.facebook.com/p/cabinet-de-M%C3%A9decine-Dr-Mikkioui-Zineb-61553445114888/",
+    instagram: "https://www.instagram.com/zinebmikkioui/",
+  },
   siteUrl: "https://cabinet-dr-mikkioui.lovable.app",
 } as const;
 

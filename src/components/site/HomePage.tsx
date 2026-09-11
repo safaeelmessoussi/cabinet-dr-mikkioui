@@ -3,7 +3,7 @@ import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle, F
 import { clinic, localeMeta, type Locale } from "@/lib/clinic";
 import { getDict } from "@/lib/i18n";
 import consultationRoom from "@/assets/consultation-room.jpg";
-import cabinetFacade from "@/assets/cabinet-facade.png.asset.json";
+import cabinetFacade from "@/assets/cabinet-facade.jpg.asset.json";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const d = getDict(locale);
@@ -218,8 +218,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 <img
                   src={cabinetFacade.url}
                   alt={d.practical.mapAlt}
-                  width={691}
-                  height={786}
+                  width={1434}
+                  height={1920}
                   loading="lazy"
                   className="w-full"
                 />

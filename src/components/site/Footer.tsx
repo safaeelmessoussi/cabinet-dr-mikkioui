@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook, Instagram } from "lucide-react";
 import { clinic, type Locale } from "@/lib/clinic";
 import type { Dict } from "@/lib/i18n";
 import { pagePath } from "@/lib/seo";
-import logoFull from "@/assets/dr-zineb-mikkioui-logo.jpg.asset.json";
+import logoMark from "@/assets/logo-mark.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Footer({ locale, d }: { locale: Locale; d: Dict }) {

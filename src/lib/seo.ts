@@ -33,6 +33,7 @@ export function physicianSchema(locale: Locale) {
     medicalSpecialty: "https://schema.org/PrimaryCare",
     url: `${clinic.siteUrl}${pagePath("home", locale)}`,
     telephone: clinic.phone.e164,
+    sameAs: [clinic.social.facebook, clinic.social.instagram],
     address: {
       "@type": "PostalAddress",
       streetAddress: clinic.address.street,

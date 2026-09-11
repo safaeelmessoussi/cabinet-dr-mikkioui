@@ -3,7 +3,7 @@ import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle, F
 import { clinic, localeMeta, type Locale } from "@/lib/clinic";
 import { getDict } from "@/lib/i18n";
 import consultationRoom from "@/assets/consultation-room.jpg";
-import cabinetFacade from "@/assets/cabinet-facade.jpg.asset.json";
+
 
 export function HomePage({ locale }: { locale: Locale }) {
   const d = getDict(locale);

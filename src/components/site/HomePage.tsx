@@ -218,8 +218,8 @@ export function HomePage({ locale }: { locale: Locale }) {
                 <img
                   src={cabinetFacade.url}
                   alt={d.practical.mapAlt}
-                  width={691}
-                  height={786}
+                  width={1434}
+                  height={1920}
                   loading="lazy"
                   className="w-full"
                 />

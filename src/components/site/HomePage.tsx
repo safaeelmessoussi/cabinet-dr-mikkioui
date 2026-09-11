@@ -216,7 +216,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
               <div className="overflow-hidden rounded-[var(--radius-card)] border border-border">
                 <img
-                  src={cabinetFacade.url}
+                  src="/cabinet-facade.jpg"
                   alt={d.practical.mapAlt}
                   width={1434}
                   height={1620}

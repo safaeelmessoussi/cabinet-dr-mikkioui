@@ -219,7 +219,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                   src={cabinetFacade.url}
                   alt={d.practical.mapAlt}
                   width={1434}
-                  height={1920}
+                  height={1620}
                   loading="lazy"
                   className="w-full"
                 />

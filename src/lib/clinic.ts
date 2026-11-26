@@ -54,6 +54,8 @@ export const clinic = {
       "https://www.facebook.com/p/cabinet-de-M%C3%A9decine-Dr-Mikkioui-Zineb-61553445114888/",
     instagram: "https://www.instagram.com/zinebmikkioui/",
   },
+  /** Online booking: the practice's own booking page (its management app), where a patient picks a free slot. */
+  booking: { url: "https://cabinetmikkioui-gestion.pages.dev/rdv/2w6j8wdbyc" },
   siteUrl: "https://cabinet-dr-mikkioui.lovable.app",
 } as const;
 

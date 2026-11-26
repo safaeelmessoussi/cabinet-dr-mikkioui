@@ -18,6 +18,7 @@ export const fr: Dict = {
     practical: "Infos pratiques",
     faq: "Questions fréquentes",
     call: "Appeler le cabinet",
+    book: "Prendre rendez-vous",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     menu: "Menu principal",
@@ -29,6 +30,7 @@ export const fr: Dict = {
     title: "Une médecine générale attentive, humaine et proche de vous à Marrakech",
     lead: "Le cabinet du Dr Zineb Mikkioui accueille les patientes et patients de Marrakech pour des consultations de médecine générale, du lundi au samedi.",
     call: "Appeler le cabinet",
+    book: "Prendre rendez-vous",
     directions: "Itinéraire",
     hours: "Voir les horaires",
     imageAlt:
@@ -42,7 +44,7 @@ export const fr: Dict = {
     reviews: "4,9 / 5 sur Google",
     reviewsDetail: "42 avis publics",
     schedule: "Lun – Sam",
-    scheduleDetail: "Sur place, sans réservation en ligne",
+    scheduleDetail: "Sur rendez-vous, en ligne ou par téléphone",
   },
   about: {
     title: "Le cabinet",
@@ -107,8 +109,9 @@ export const fr: Dict = {
   },
   appointment: {
     title: "Prendre rendez-vous",
-    body: "Le cabinet ne propose pas de réservation en ligne. Pour prendre rendez-vous ou poser une question d'organisation, appelez directement le cabinet pendant les heures d'ouverture.",
+    body: "Choisissez en ligne un créneau libre : le cabinet vous confirme ensuite le rendez-vous. Vous pouvez aussi appeler le cabinet pendant les heures d'ouverture, notamment pour une question d'organisation.",
     cta: "Appeler le cabinet",
+    book: "Prendre rendez-vous",
     noForm: null,
   },
   emergency: {
@@ -127,7 +130,7 @@ export const fr: Dict = {
     items: [
       {
         q: "Comment prendre rendez-vous ?",
-        a: "Par téléphone, en appelant le cabinet au +212 5 24 34 50 84 pendant les heures d'ouverture. Il n'existe pas de réservation en ligne.",
+        a: "En ligne, avec le bouton « Prendre rendez-vous » : vous choisissez un créneau libre et le cabinet vous confirme le rendez-vous. Ou par téléphone, au +212 5 24 34 50 84 pendant les heures d'ouverture.",
       },
       {
         q: "Où se trouve le cabinet ?",
@@ -187,6 +190,10 @@ export const fr: Dict = {
     intro:
       "Ce site est volontairement minimaliste : il collecte aucune donnée personnelle et ne cherche pas à identifier ses visiteurs.",
     sections: [
+      {
+        title: "Prise de rendez-vous en ligne",
+        body: "Le bouton « Prendre rendez-vous » ouvre la page de réservation du cabinet, distincte de ce site. Seuls votre nom, votre téléphone et le créneau choisi y sont demandés ; ils sont chiffrés et transmis au cabinet, uniquement pour organiser votre rendez-vous.",
+      },
       {
         title: "Aucune collecte de données",
         body: "Il n'existe sur ce site ni formulaire, ni compte, ni espace patient, ni newsletter. Aucune information de santé ne peut donc y être transmise, et aucune ne l'est.",

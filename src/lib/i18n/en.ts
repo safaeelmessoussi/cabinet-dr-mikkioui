@@ -18,6 +18,7 @@ export const en: Dict = {
     practical: "Practical information",
     faq: "Frequently asked questions",
     call: "Call the practice",
+    book: "Book an appointment",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     menu: "Main menu",
@@ -29,6 +30,7 @@ export const en: Dict = {
     title: "Attentive, human general medicine, close to you in Marrakech",
     lead: "Dr Zineb Mikkioui's practice welcomes patients in Marrakech for general medical consultations, Monday to Saturday.",
     call: "Call the practice",
+    book: "Book an appointment",
     directions: "Get directions",
     hours: "See opening hours",
     imageAlt:
@@ -42,7 +44,7 @@ export const en: Dict = {
     reviews: "4.9 / 5 on Google",
     reviewsDetail: "42 public reviews",
     schedule: "Mon – Sat",
-    scheduleDetail: "On site, no online booking",
+    scheduleDetail: "By appointment, online or by phone",
   },
   about: {
     title: "The practice",
@@ -107,8 +109,9 @@ export const en: Dict = {
   },
   appointment: {
     title: "Booking an appointment",
-    body: "The practice does not offer online booking. To make an appointment or ask a practical question, please call the practice directly during opening hours.",
+    body: "Choose a free slot online and the practice will then confirm your appointment. You can also call the practice during opening hours, for instance with a practical question.",
     cta: "Call the practice",
+    book: "Book an appointment",
     noForm: null,
   },
   emergency: {
@@ -127,7 +130,7 @@ export const en: Dict = {
     items: [
       {
         q: "How do I make an appointment?",
-        a: "By phone, calling the practice on +212 5 24 34 50 84 during opening hours. There is no online booking.",
+        a: "Online, with the “Book an appointment” button: you choose a free slot and the practice confirms your appointment. Or by phone, on +212 5 24 34 50 84 during opening hours.",
       },
       {
         q: "Where is the practice?",
@@ -187,6 +190,10 @@ export const en: Dict = {
     intro:
       "This website is deliberately minimal: it collects no personal data and does not seek to identify its visitors.",
     sections: [
+      {
+        title: "Online booking",
+        body: "The “Book an appointment” button opens the practice's booking page, separate from this website. Only your name, phone number and chosen slot are asked there; they are encrypted and sent to the practice, solely to arrange your appointment.",
+      },
       {
         title: "No data collection",
         body: "There is no form, account, patient portal or newsletter on this site. No health information can be sent through it, and none is.",

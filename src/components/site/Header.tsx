@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, X } from "lucide-react";
+import { CalendarCheck, Menu, Phone, X } from "lucide-react";
 import { clinic, type Locale } from "@/lib/clinic";
 import type { Dict } from "@/lib/i18n";
 import { pagePath } from "@/lib/seo";
@@ -62,9 +62,12 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
 
         <div className="flex shrink-0 items-center gap-2">
           <LanguageSwitcher current={locale} label={d.nav.chooseLanguage} compact className="hidden md:block" />
-          <a href={clinic.phone.href} className="btn btn-primary hidden !min-h-11 !px-4 text-sm whitespace-nowrap sm:inline-flex xl:!px-3.5">
+          <a href={clinic.phone.href} aria-label={d.nav.call} title={d.nav.call} className="btn btn-outline hidden !min-h-11 !w-11 !px-0 sm:inline-flex">
             <Phone aria-hidden="true" className="h-4 w-4" />
-            {d.nav.call}
+          </a>
+          <a href={clinic.booking.url} className="btn btn-primary hidden !min-h-11 !px-4 text-sm whitespace-nowrap sm:inline-flex xl:!px-3.5">
+            <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+            {d.nav.book}
           </a>
           <button
             type="button"
@@ -97,7 +100,11 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
                 ))}
               </ul>
             </nav>
-            <a href={clinic.phone.href} className="btn btn-primary w-full">
+            <a href={clinic.booking.url} className="btn btn-primary w-full">
+              <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+              {d.nav.book}
+            </a>
+            <a href={clinic.phone.href} className="btn btn-outline w-full">
               <Phone aria-hidden="true" className="h-4 w-4" />
               {d.nav.call}
             </a>

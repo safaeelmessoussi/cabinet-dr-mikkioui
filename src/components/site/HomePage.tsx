@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle, Facebook, Instagram } from "lucide-react";
+import { CalendarCheck, Clock, MapPin, Phone, Star, Stethoscope, ExternalLink, AlertTriangle, Facebook, Instagram } from "lucide-react";
 import { clinic, localeMeta, type Locale } from "@/lib/clinic";
 import { getDict } from "@/lib/i18n";
 import consultationRoom from "@/assets/consultation-room.jpg";
@@ -28,7 +28,11 @@ export function HomePage({ locale }: { locale: Locale }) {
             </h1>
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">{d.hero.lead}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href={clinic.phone.href} className="btn btn-primary">
+              <a href={clinic.booking.url} className="btn btn-primary">
+                <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+                {d.hero.book}
+              </a>
+              <a href={clinic.phone.href} className="btn btn-outline">
                 <Phone aria-hidden="true" className="h-4 w-4" />
                 {d.hero.call}
               </a>
@@ -268,16 +272,22 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div className="rounded-[var(--radius-card)] bg-primary px-6 py-10 text-primary-foreground sm:px-12 sm:py-14">
             <h2 className="max-w-2xl text-2xl text-primary-foreground sm:text-3xl">{d.appointment.title}</h2>
             <p className="mt-4 max-w-2xl text-lg opacity-90">{d.appointment.body}</p>
-            <a
-              href={clinic.phone.href}
-              className="btn mt-8 bg-background text-primary hover:bg-surface-strong"
-            >
-              <Phone aria-hidden="true" className="h-4 w-4" />
-              {d.appointment.cta}
-              <span dir="ltr" className="font-display">
-                {clinic.phone.display}
-              </span>
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href={clinic.booking.url} className="btn bg-background text-primary hover:bg-surface-strong">
+                <CalendarCheck aria-hidden="true" className="h-4 w-4" />
+                {d.appointment.book}
+              </a>
+              <a
+                href={clinic.phone.href}
+                className="btn border border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <Phone aria-hidden="true" className="h-4 w-4" />
+                {d.appointment.cta}
+                <span dir="ltr" className="font-display">
+                  {clinic.phone.display}
+                </span>
+              </a>
+            </div>
             {d.appointment.noForm && (
               <p className="mt-6 max-w-2xl text-sm opacity-80">{d.appointment.noForm}</p>
             )}

@@ -9,6 +9,7 @@ export interface Dict {
     practical: string;
     faq: string;
     call: string;
+    book: string;
     openMenu: string;
     closeMenu: string;
     menu: string;
@@ -20,6 +21,7 @@ export interface Dict {
     title: string;
     lead: string;
     call: string;
+    book: string;
     directions: string;
     hours: string;
     imageAlt: string;
@@ -57,7 +59,7 @@ export interface Dict {
     days: string[];
     today: string;
   };
-  appointment: { title: string; body: string; cta: string; noForm: string | null };
+  appointment: { title: string; body: string; cta: string; book: string; noForm: string | null };
   emergency: {
     title: string;
     body: string;
